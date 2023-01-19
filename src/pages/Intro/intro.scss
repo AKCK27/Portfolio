@@ -1,0 +1,98 @@
+.Intro{
+    display: flex;
+    .intro--text{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+       
+        margin:10px;
+
+        p{
+            font-size: 30px;
+            margin:30px;
+            padding:10px;
+            text-align: left;
+            border-left: 2px solid #000;
+            border-right: 2px solid #000;
+            
+        }
+        a{
+            text-decoration: none;
+            box-shadow: 3px 3px 5px rgb(2, 236, 244);
+            border-radius: 20px;
+            margin:30px;
+            h2{
+                font-size: 50px;
+                text-align: center;
+                color: rgb(255, 11, 11);
+                
+            }
+        }
+    }
+    .intro--image{
+        flex:1;
+        display: flex;
+        flex-direction:row-reverse;
+       justify-content: space-around;
+        align-items:center;
+
+        .i--image{
+            flex:1;
+            height:100%;
+            width:100%;
+            border-radius:50%;
+        }
+        .sub--description{
+          
+            height: 50px;
+            overflow: hidden;
+            .animation{
+                height: 100%;
+                animation: move 10s ease-in-out infinite alternate;
+                @keyframes move {
+                    25%{transform: translateY(-50px);
+
+                    }
+                    50%{
+                        transform: translateY(-100px);
+                    }
+                    75%{
+                        transform: translateY(-150px);
+                    }
+                    100%{
+                        transform: translateY(-200px);
+                    }
+                
+                
+                    
+                }
+                .sub{
+                    height:50px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+}
+&{
+    @media only screen  and (max-width:768px){
+        .intro--image{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .i--image {
+
+            }
+            .sub--description{
+                margin-bottom: 800px;
+            }
+        }
+
+        
+    }
+}
+}

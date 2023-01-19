@@ -1,0 +1,50 @@
+.Navbar {
+     display: flex;
+     align-items: center;
+     width: 100%;
+    .left{
+        flex: 1;
+    
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        min-width: 30%;
+        .logo{
+            width:130px;
+            height:130px;
+        }
+        .title{
+            font-size: 35px;
+
+
+        }
+    }
+    .right{
+        flex:5;
+        .Navbar--list--items{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+            .item{ 
+                list-style: none;
+
+            }
+        }
+    }
+    @media only screen and (max-width: 768px){
+        &{
+            display: flex;
+            align-content: center;
+            .left{
+                flex: 1;
+
+
+            }
+            .right{
+                visibility: hidden;
+            }
+        }
+        
+    }
+}
